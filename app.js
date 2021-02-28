@@ -23,7 +23,7 @@ app.post('/favorites', async (req, res) => {
 
   try {
     if (favType !== 'movie' && favType !== 'character') {
-      throw new Error('"type" debe ser "película" o "personaje"!');
+      throw new Error('"type" debe ser "movie" o "character"!');
     }
     const existingFav = await Favorite.findOne({ name: favName });
     if (existingFav) {
