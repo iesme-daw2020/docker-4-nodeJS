@@ -45,7 +45,7 @@ app.post('/favorites', async (req, res) => {
       .status(201)
       .json({ message: 'Favorito guardado!', favorite: favorite.toObject() });
   } catch (error) {
-    res.status(500).json({ message: 'Algo fuer mal.' });
+    res.status(500).json({ message: 'Algo fue mal.' });
   }
 });
 
@@ -54,7 +54,7 @@ app.get('/movies', async (req, res) => {
     const response = await axios.get('https://swapi.dev/api/films');
     res.status(200).json({ movies: response.data });
   } catch (error) {
-    res.status(500).json({ message: 'Algo fuer mal.' });
+    res.status(500).json({ message: 'Algo fue mal.' });
   }
 });
 
@@ -63,7 +63,7 @@ app.get('/people', async (req, res) => {
     const response = await axios.get('https://swapi.dev/api/people');
     res.status(200).json({ people: response.data });
   } catch (error) {
-    res.status(500).json({ message: 'Algo fuer mal.' });
+    res.status(500).json({ message: 'Algo fue mal.' });
   }
 });
 
